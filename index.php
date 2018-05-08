@@ -1,4 +1,5 @@
-<?php include("include/base.php");?><!DOCTYPE html>
+<?php include("include/base.php");?>
+<!DOCTYPE html>
 <html lang="en" >
 <head>
         <meta http-equiv="content-type" content="text/html;charset=UTF-8" />
@@ -7,7 +8,7 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
         <!--begin::Web font -->
-        <script src="assets/ajax/libs/webfont/1.6.16/webfont.js"></script>
+        <script src="<?php echo DIR_ROOT.DIR_WEBFONT;?>"></script>
         <script>
           WebFont.load({
             google: {"families":["Poppins:300,400,500,600,700","Roboto:300,400,500,600,700"]},
@@ -18,10 +19,10 @@
         </script>
         <!--end::Web font -->
         <!--begin::Base Styles -->  
-        <link href="assets/vendors/base/vendors.bundle.css" rel="stylesheet" type="text/css" />
-        <link href="assets/demo/default/base/style.bundle.css" rel="stylesheet" type="text/css" />
+        <link href="<?php echo DIR_ROOT.DIR_VENDORS;?>vendors.bundle.css" rel="stylesheet" type="text/css" />
+        <link href="<?php echo DIR_ROOT.DIR_DEMO_DEFAULT_BASE;?>style.bundle.css" rel="stylesheet" type="text/css" />
 		<!--end::Base Styles -->
-        <link rel="shortcut icon" href="assets/demo/default/media/img/logo/favicon.ico" /> 
+        <link rel="shortcut icon" href="<?php echo DIR_ROOT.DIR_TITLE_LOGO;?>" /> 
 </head>
     <!-- end::Head --> 
     <!-- begin::Body -->
@@ -35,7 +36,7 @@
 					<div class="m-login__wrapper">
 						<div class="m-login__logo">
 							<a href="#">
-							<img src="assets/app/media/img/logos/logo-2.png">  	
+							<img src="<?php echo DIR_ROOT.DIR_LOGO;?>">  	
 							</a>
 						</div>
 						<div class="m-login__signin">
@@ -43,11 +44,15 @@
 								<h3 class="m-login__title">Sign In To Admin</h3>
 							</div>
 							<form class="m-login__form m-form" action="<?php echo DIR_ROOT.DIR_FORM."lgn.php";?>" method="post">
-								<div class="form-group m-form__group">
+                                <div id="login-error" class="m-alert m-alert--outline alert alert-danger alert-dismissible animated fadeIn hide" role="alert">			<button type="button" class="close" data-dismiss="alert" aria-label="Close"></button>			<span>Incorrect username or password. Please try again.</span>		</div>
+								<div class="form-group m-form__group has-danger">
 									<input class="form-control m-input" type="text" placeholder="Email" name="email" id="email" autocomplete="off">
+                                    <div id="email-error" class="form-control-feedback hide">This field is required.</div>
+                                    <div id="email-error1" class="form-control-feedback hide">Invalid Email Address.</div>
 								</div>
-								<div class="form-group m-form__group">
+								<div class="form-group m-form__group has-danger">
 									<input class="form-control m-input m-login__form-input--last" type="password" placeholder="Password" name="password" id="password">
+                                    <div id="password-error" class="form-control-feedback hide">This field is required.</div>
 								</div>
 								<div class="row m-login__form-sub">
 									<div class="col m--align-left">
@@ -62,7 +67,6 @@
 								</div>
 								<div class="m-login__form-action">
 									<button id="m_login_signin_submit" class="btn btn-focus m-btn m-btn--pill m-btn--custom m-btn--air">Sign In</button>
-                                    <input type="submit" value="submit"/>
 								</div>
 							</form>
 						</div>
@@ -73,17 +77,22 @@
 								<div class="m-login__desc">Enter your details to create your account:</div>
 							</div>
 							<form class="m-login__form m-form" action="<?php echo DIR_ROOT.DIR_FORM."reg.php";?>" method="post">
-                                <div class="form-group m-form__group">
-									<input class="form-control m-input" type="email" placeholder="Email" name="email" id="email" autocomplete="off">
+                                <div class="form-group m-form__group has-danger">
+									<input class="form-control m-input" type="email" placeholder="Email" name="semail" id="semail" autocomplete="off">
+                                    <div id="semail-error" class="form-control-feedback hide">This field is required.</div>
+                                    <div id="semail-error1" class="form-control-feedback hide">Invalid Email Address.</div>
 								</div>
-								<div class="form-group m-form__group">
-									<input class="form-control m-input" type="password" placeholder="Password" name="password" id="password">
+								<div class="form-group m-form__group has-danger">
+									<input class="form-control m-input" type="password" placeholder="Password" name="spassword" id="spassword">
+                                    <div id="spassword-error" class="form-control-feedback hide">This field is required.</div>
 								</div>
-								<div class="form-group m-form__group">
-									<input class="form-control m-input" type="password" placeholder="Confirm Password" name="cpassword" id="cpassword">
+								<div class="form-group m-form__group has-danger">
+									<input class="form-control m-input" type="password" placeholder="Confirm Password" name="scpassword" id="scpassword">
+                                    <div id="scpassword-error" class="form-control-feedback hide">This field is required.</div>
 								</div>
-								<div class="form-group m-form__group">
-									<input class="form-control m-input" type="text" placeholder="Full Name" name="fullname" id="fullname">
+								<div class="form-group m-form__group has-danger">
+									<input class="form-control m-input" type="text" placeholder="Full Name" name="sfullname" id="sfullname">
+                                    <div id="sfullname-error" class="form-control-feedback hide">This field is required.</div>
 								</div>
                                 <br>
                                 <div class="form-group m-form__group row">
@@ -92,22 +101,26 @@
                                         <option>+961</option>
                                     </select>
                                     </div>
-                                    <div class="col-lg-8">
-                                        <input class="form-control m-input" type="tel" placeholder="Phone No." name="phone" id="phone">
+                                    <div class="col-lg-8 has-danger">
+                                        <input class="form-control m-input" type="tel" placeholder="Phone No." name="sphone" id="sphone">
+                                        <div id="sphone-error" class="form-control-feedback hide">This field is required.</div>
+                                        <div id="sphone-error1" class="form-control-feedback hide">Invalid Phone number.</div>
                                     </div>
                                 </div>
-                                <div class="form-group m-form__group">
-									<input class="form-control m-input" type="text" placeholder="Company / Blog Name" name="company_name" id="company_name">
+                                <div class="form-group m-form__group has-danger">
+									<input class="form-control m-input" type="text" placeholder="Company / Blog Name" name="scompany_name" id="scompany_name">
+                                    <div id="scompany_name-error" class="form-control-feedback hide">This field is required.</div>
 								</div>
                                 <br>
-                                <div class="form-group m-form__group">
+                                <div class="form-group m-form__group has-danger">
                                     <select class="form-control m-input m-input--square" id="traffic" name="traffic">
-                                        <option>Trafic</option>
-                                        <option>2</option>
-                                        <option>3</option>
-                                        <option>4</option>
-                                        <option>5</option>
+                                        <option value="0">Trafic</option>
+                                        <option value="1">1</option>
+                                        <option value="2">2</option>
+                                        <option value="3">3</option>
+                                        <option value="4">4</option>
                                     </select>
+                                    <div id="traffic-error" class="form-control-feedback hide">This field is required.</div>
                                 </div>
                                 <br>
                                 <div class="form-group m-form__group row">
@@ -117,8 +130,10 @@
                                         <option>https://</option>
                                     </select>
                                     </div>
-                                    <div class="col-lg-8">
-                                        <input class="form-control m-input" type="text" placeholder="Website / Blog URL" name="website" id="website">
+                                    <div class="col-lg-8 has-danger">
+                                        <input class="form-control m-input" type="text" placeholder="Website / Blog URL" name="swebsite" id="swebsite">
+                                        <div id="swebsite-error" class="form-control-feedback hide">This field is required.</div>
+                                        <div id="swebsite-error1" class="form-control-feedback hide">Invalid URL.</div>
                                     </div>
                                 </div>
 								<div class="row form-group m-form__group m-login__form-sub">
@@ -132,7 +147,6 @@
 								</div>
 								<div class="m-login__form-action">
 									<button id="m_login_signup_submit" class="btn btn-focus m-btn m-btn--pill m-btn--custom m-btn--air">Sign Up</button>
-                                    <input type="submit" value="submit"/>
 									<button id="m_login_signup_cancel" class="btn btn-outline-focus  m-btn m-btn--pill m-btn--custom">Cancel</button>
 								</div>
 							</form>
@@ -144,7 +158,7 @@
 								<div class="m-login__desc">Enter your email to reset your password:</div>
 							</div>
 							<form class="m-login__form m-form" action="#">
-								<div class="form-group m-form__group">
+								<div class="form-group m-form__group has-danger">
 									<input class="form-control m-input" type="text" placeholder="Email" name="email" id="m_email" autocomplete="off">
 								</div>
 								<div class="m-login__form-action">
@@ -184,8 +198,8 @@
 
 
     	<!--begin::Base Scripts -->        
-    	    	<script src="assets/vendors/base/vendors.bundle.js" type="text/javascript"></script>
-		    	<script src="assets/demo/default/base/scripts.bundle.js" type="text/javascript"></script>
+    	    	<script src="<?php echo DIR_ROOT.DIR_VENDORS;?>vendors.bundle.js" type="text/javascript"></script>
+		    	<script src="<?php echo DIR_ROOT.DIR_DEMO_DEFAULT_BASE;?>scripts.bundle.js" type="text/javascript"></script>
 				<!--end::Base Scripts -->   
 
          
@@ -193,7 +207,8 @@
         
                     
         <!--begin::Page Snippets --> 
-                <script src="assets/snippets/custom/pages/user/login.js" type="text/javascript"></script>
+            <!--<script src="assets/snippets/custom/pages/user/login.js" type="text/javascript"></script>-->
+                 <script src="<?php echo DIR_ROOT.DIR_JS;?>lgn_reg.js" type="text/javascript"></script>
                 <!--end::Page Snippets -->   
         
                 

@@ -2,16 +2,17 @@
 /**
  * Directory variables //require_once './include/base.php'; 
  */
-define("DIR_ROOT", "http://localhost/notification-system/");
+define("DIR_ROOT", "http://localhost/notificationsys/");
 define("DIR_CSS", "assets/css/");
-define("DIR_FONTAWESOME", "");
-define("DIR_LOGO", "");
-define("DIR_ICONS", "");
-define("DIR_IMG_DEFAULTS", "");
+define("DIR_WEBFONT", "assets/ajax/libs/webfont/1.6.16/webfont.js");
+define("DIR_VENDORS", "assets/vendors/base/");
+define("DIR_DEMO_DEFAULT_BASE", "assets/demo/default/base/");
+define("DIR_TITLE_LOGO", "assets/demo/default/media/img/logo/favicon.ico");
 define("DIR_INCLUDE", "include/");
 define("DIR_VIEW", "views/");
-define("DIR_USER", "");
-define("DIR_UPLOAD", "");
+define("DIR_LOGO", "assets/app/media/img/logos/logo-2.png");
+define("DIR_JS", "assets/js/");
+
 define("DIR_PUB", "");
 define("DIR_ADV", "");
 define("DIR_HEADER", "views/headers/");
