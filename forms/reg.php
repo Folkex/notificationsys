@@ -4,26 +4,23 @@ require_once '../'.DIR_INCLUDE.'DB_Login.php';
 $db = new DB_Login();
 // json response array
 $response = array("error" => FALSE);
-echo "111";
-echo $_POST['email']."////".$_POST['password']."////".$_POST['fullname']."////".$_POST['phone']."////".$_POST['company_name']."////".$_POST['traffic']."////".$_POST['website'];
-if (isset($_POST['email'])  &&  isset($_POST['password']) && isset($_POST['fullname']) && isset($_POST['phone']) && isset($_POST['company_name']) && isset($_POST['traffic']) && isset($_POST['website'])) {
-    echo "222";
+
+if (isset($_POST['semail'])  &&  isset($_POST['spassword']) && isset($_POST['sfullname']) && isset($_POST['sphone']) && isset($_POST['scompany_name']) /*&& isset($_POST['traffic'])*/ && isset($_POST['swebsite']) && isset($_POST['country_code'])) {
     // receiving the post params
-    $email = $_POST['email'];
-	$password = $_POST['password'];
-	$fullname = $_POST['fullname'];
-	$phone=$_POST['phone'];
-	$company_name=$_POST['company_name'];
-	$traffic=$_POST['traffic'];
-	$website=$_POST['website'];
+    $email = $_POST['semail'];
+	$password = $_POST['spassword'];
+	$fullname = $_POST['sfullname'];
+	$phone=$_POST['country_code'].$_POST['sphone'];
+	$company_name=$_POST['scompany_name'];
+	/*$traffic=$_POST['traffic'];*/
+	$traffic=0;
+	$website=$_POST['swebsite'];
     // check if admin is already existed with the same adminemail
     if ($adminex=$db->isadminExisted($email)) {
-        echo "333";
         // admin already existed
         $response["error"] = TRUE;
         header("Location:".DIR_ROOT."index.php?err=1");
     } else {
-        echo "444";
         // create a new admin
         $admin = $db->insertadmin($email, $password, $fullname, $phone, $company_name, $traffic, $website);
          if ($admin) {
@@ -64,9 +61,7 @@ header("Location:".DIR_ROOT."index.php?reg=1");
         } 
 		}
 } else {
-    echo "555";
     $response["error"] = TRUE;
-    $response["error_msg"] = "Required parameters (name, adminemail or password) is missing!";
     //echo json_encode($response);
     header("Location:".DIR_ROOT."index.php?err=2");
 }

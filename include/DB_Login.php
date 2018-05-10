@@ -88,7 +88,7 @@ class DB_Login {
     /**
      * Get user by useremail and password
      */
-    public function getUserByEmailAndPassword($email, $password) {
+    public function getadminByEmailAndPassword($email, $password) {
         $stmt = $this->conn->prepare("SELECT * FROM admins WHERE email = ? and activation_code=1");
         $stmt->bind_param("s", $email);
 

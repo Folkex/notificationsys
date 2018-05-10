@@ -41,11 +41,11 @@ if ((isset($_POST['email']) && isset($_POST['password'])) || (isset($_COOKIE['ad
     } else {
         // admin is not found with the credentials
         $response["error"] = TRUE;
-		header("location:".DIR_ROOT."index.php?err=1");
+		header("location:".DIR_ROOT."index.php?err=4");
     }	
 } else {
     // required post params is missing
     $response["error"] = TRUE;
-	header("location:".DIR_ROOT."index.php?err=2");
+	header("location:".DIR_ROOT."index.php?err=5");
 }
 ?>
