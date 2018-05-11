@@ -1,5 +1,8 @@
 <?php 
 include("include/base.php");
+$email=$_GET["email"];
+$activation_code=$_GET["activation_code"];
+$activation_salt=$_GET["salt"];
 ?>
 <!DOCTYPE html>
 <html lang="en" >
@@ -45,15 +48,18 @@ include("include/base.php");
 				<div class="m-login__head">
 					<h3 class="m-login__title">Change your password</h3>
 				</div>
-				<form class="m-login__form m-form" action="<?php echo DIR_ROOT.DIR_FORM."chngpass.php";?>" method="post">
-					<div class="form-group m-form__group">
-						<input class="form-control m-input" type="password" placeholder="cgpassword" name="cgpassword" autocomplete="off">
+
+				<form class="m-login__form m-form" action="<?php echo DIR_ROOT.DIR_FORM."passrecovery.php?email=".$email."&activation_code=".$activation_code."&salt=".$activation_salt."";?>" method="post">
+					<div class="form-group m-form__group has-danger">
+						<input class="form-control m-input " type="password" placeholder="Password" name="cgpassword" id="cgpassword" autocomplete="off">
+                       <div id="cgpassword-error" class="form-control-feedback hide">This field is required.</div>
 					</div>
-					<div class="form-group m-form__group">
-						<input class="form-control m-input m-login__form-input--last" type="password" placeholder="ccgpassword" name="ccgpassword">
-					</div>
+
+					<div class="form-group m-form__group has-danger">
+						<input class="form-control m-input m-login__form-input--last" type="password" placeholder="Confirm Password" id="ccgpassword" name="ccgpassword">
+                        <div id="ccgpassword-error" class="form-control-feedback hide">This field is required.</div>
 					<div class="m-login__form-action">
-						<button id="m_login_signin_submit" class="btn btn-focus m-btn m-btn--pill m-btn--custom m-btn--air  m-login__btn m-login__btn--primary">Submit</button>
+						<button id="m_login_recover_password_submit" class="btn btn-focus m-btn m-btn--pill m-btn--custom m-btn--air  m-login__btn m-login__btn--primary">Submit</button>
 					</div>
 				</form>
 			</div>
@@ -68,8 +74,8 @@ include("include/base.php");
 				<!--end::Base Scripts --> 
                     
         <!--begin::Page Snippets --> 
-            <!-- <script src="assets/snippets/custom/pages/user/login.js" type="text/javascript"></script>-->
-                <script src="<?php echo DIR_ROOT.DIR_JS;?>lgn_reg.js" type="text/javascript"></script>
+             <!-- <script src="assets/snippets/custom/pages/user/login.js" type="text/javascript"></script>-->
+               <script src="<?php echo DIR_ROOT.DIR_JS;?>lgn_reg.js" type="text/javascript"></script>
                 <!--end::Page Snippets --> 
             </body>
     <!-- end::Body -->

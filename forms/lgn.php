@@ -30,7 +30,7 @@ if ((isset($_POST['email']) && isset($_POST['password'])) || (isset($_COOKIE['ad
         $_SESSION['adminId']=$response["adminId"];
         $_SESSION['fullname']=$response["admin"]["fullname"];
         if(isset($_POST['remember']))
-        {
+        {echo "111";
         	$cookie_email = $_POST['email'];
         	$cookie_password = $_POST['password'];
         	setcookie("admin-email", $cookie_email, time() + (86400 * 30), "/");

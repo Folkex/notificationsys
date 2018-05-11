@@ -14,6 +14,20 @@ if(isset($_GET['err']) && $_GET['err']==2) $error_msg2="";
 if(isset($_GET['err']) && $_GET['err']==3) $error_msg3="";
 if(isset($_GET['err']) && $_GET['err']==4) $error_msg4="";
 if(isset($_GET['err']) && $_GET['err']==5) $error_msg5="";
+//get cookies if set 
+if(isset($_COOKIE['admin-email']) && isset($_COOKIE['admin-password']))
+{
+header("Location:".DIR_ROOT.DIR_FORM."lgn.php");
+}
+if(isset($_GET['logout'])){
+    $logout=$_GET['logout'];
+    $displaysuc="block";
+    if($logout==true) $regmsg="Logged Out.";
+// remove all session variables
+session_unset();
+// destroy the session
+session_destroy(); 
+}
 ?>
 <!DOCTYPE html>
 <html lang="en" >
@@ -60,7 +74,7 @@ if(isset($_GET['err']) && $_GET['err']==5) $error_msg5="";
 								<h3 class="m-login__title">Sign In To Admin</h3>
 							</div>
 							<form class="m-login__form m-form" action="<?php echo DIR_ROOT.DIR_FORM."lgn.php";?>" method="post">
-                                <!--- Start Success and Error Messages--->
+                                <!--- Start Success and Error Messages-->
                                 <div id="recovery-success" class="m-alert m-alert--outline alert alert-success alert-dismissible animated fadeIn <?php echo $success_msg;?>" role="alert">			<button type="button" class="close" data-dismiss="alert" aria-label="Close"></button>			<span>Cool! Account activation instruction has been sent to your email.</span>		</div>
                                 <div id="recovery-success" class="m-alert m-alert--outline alert alert-success alert-dismissible animated fadeIn <?php echo $success_msg2;?>" role="alert">			<button type="button" class="close" data-dismiss="alert" aria-label="Close"></button>			<span>Cool! Password recovery instruction has been sent to your email.</span>		</div>
                                 <div id="login-error" class="m-alert m-alert--outline alert alert-danger alert-dismissible animated fadeIn <?php echo $error_msg;?>" role="alert">			<button type="button" class="close" data-dismiss="alert" aria-label="Close"></button>			<span>User with same Email address already exists!</span>		</div>
@@ -68,7 +82,7 @@ if(isset($_GET['err']) && $_GET['err']==5) $error_msg5="";
                                 <div id="login-error" class="m-alert m-alert--outline alert alert-danger alert-dismissible animated fadeIn <?php echo $error_msg3;?>" role="alert">			<button type="button" class="close" data-dismiss="alert" aria-label="Close"></button>			<span>Your data wasn't saved, please check your internet connection!</span>		</div>
                                 <div id="login-error" class="m-alert m-alert--outline alert alert-danger alert-dismissible animated fadeIn <?php echo $error_msg4;?>" role="alert">			<button type="button" class="close" data-dismiss="alert" aria-label="Close"></button>			<span>User is not found with the credentials!</span>		</div>
                                 <div id="login-error" class="m-alert m-alert--outline alert alert-danger alert-dismissible animated fadeIn <?php echo $error_msg5;?>" role="alert">			<button type="button" class="close" data-dismiss="alert" aria-label="Close"></button>			<span>Missing Email and/or Password. Please try again.</span>		</div>
-                                <!--- End Success and Error Messages--->
+                                <!--- End Success and Error Messages-->
 								<div class="form-group m-form__group has-danger">
 									<input class="form-control m-input" type="text" placeholder="Email" name="email" id="email" autocomplete="off">
                                     <div id="email-error" class="form-control-feedback hide">This field is required.</div>
@@ -81,7 +95,7 @@ if(isset($_GET['err']) && $_GET['err']==5) $error_msg5="";
 								<div class="row m-login__form-sub">
 									<div class="col m--align-left">
 										<label class="m-checkbox m-checkbox--focus">
-										<input type="checkbox" name="remember"> Remember me
+										<input type="checkbox" name="remember" id="remember"> Remember me
 										<span></span>
 										</label>
 									</div>

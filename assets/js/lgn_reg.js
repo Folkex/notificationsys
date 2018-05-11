@@ -1,4 +1,4 @@
-/***Sign In ***/
+/***Sign In Form***/
 $("#m_login_signin_submit").click(function(){
     var submit = true;
    /***Email validation***/
@@ -54,7 +54,7 @@ $("#password").blur(function(){
         $("#password-error").addClass("hide");        
     }
 });
-/***Sign Up ***/
+/***Sign Up Form***/
 $("#m_login_signup_submit").click(function(){
     var submit = true;
     var login = false;
@@ -333,6 +333,57 @@ $("#m_login_forget_password_submit").click(function(){
         $("#lstpwemail-error").addClass("hide");  
     }
     return submit;
+});
+/***Change password ***/
+$("#m_login_recover_password_submit").click(function(){
+    var submit = true;
+/***Password validation***/
+    if( $("#cgpassword").val().length < 8 ) {
+        $("#cgpassword-error").removeClass("hide");
+        $("#cgpassword-error").addClass("show");
+        $("#ccgpassword-error").removeClass("hide");
+        $("#ccgpassword-error").addClass("show");
+        submit = false;
+    }else if($("#cgpassword").val()!=$("#ccgpassword").val()){
+        $("#cgpassword-error").removeClass("show");
+        $("#cgpassword-error").addClass("hide");
+        $("#ccgpassword-error").removeClass("hide");
+        $("#ccgpassword-error").addClass("show"); 
+        submit = false;
+    }else{
+        $("#cgpassword-error").removeClass("show");
+        $("#cgpassword-error").addClass("hide");
+        $("#ccgpassword-error").removeClass("show");
+        $("#ccgpassword-error").addClass("hide");
+    }
+    return submit;
+});
+$("#cgpassword").blur(function(){
+    if( $("#cgpassword").val().length < 8 ) {
+        $("#cgpassword-error").removeClass("hide");
+        $("#cgpassword-error").addClass("show");
+        $("#ccgpassword-error").removeClass("hide");
+        $("#ccgpassword-error").addClass("show");
+    }else if($("#cgpassword").val()!=$("#ccgpassword").val()){
+        $("#cgpassword-error").removeClass("show");
+        $("#cgpassword-error").addClass("hide");
+        $("#ccgpassword-error").removeClass("hide");
+        $("#ccgpassword-error").addClass("show"); 
+    }else{
+        $("#cgpassword-error").removeClass("show");
+        $("#cgpassword-error").addClass("hide");
+        $("#ccgpassword-error").removeClass("show");
+        $("#ccgpassword-error").addClass("hide");
+    }
+});
+$("#ccgpassword").blur(function(){
+    if($("#cgpassword").val()!=$("#ccgpassword").val()){
+        $("#ccgpassword-error").removeClass("hide");
+        $("#ccgpassword-error").addClass("show"); 
+    }else{
+        $("#ccgpassword-error").removeClass("show");
+        $("#ccgpassword-error").addClass("hide");
+    }
 });
 /* jQuery Validate Emails with Regex */
 function validateEmail(Email) {

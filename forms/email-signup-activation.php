@@ -1,6 +1,6 @@
 <?php
-require_once '../../include/base.php';
-require_once '../../'.DIR_INCLUDE.'DB_Login.php';
+require_once '../include/base.php';
+require_once '../'.DIR_INCLUDE.'DB_Login.php';
 ?>
 <!DOCTYPE html>
 <html>
