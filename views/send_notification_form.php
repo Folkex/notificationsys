@@ -183,11 +183,18 @@ include ('header.php');?>
 							</h3>
 							</div>			
 							</div>
-							</div>
+							</div><br>
 							<div class="m-portlet__body" style="background: #F0F0F0;border-radius: 5px;border: 1px solid #ccc; min-height: 89px;width: 362px !important;">
 							<div style="margin-top: 10px !important;padding: 10px !important;" class="col-xs-2"><img src="../images/chrome.png" style="width: 40px; float: left !important;border: 0;margin-left: -25px;"></div>
 							<div style="margin-top: -15px;margin-right: 60px;" class="col-xs-2"><span style="margin-left: 13px;">Notification Title</span><br> <span style="margin-left: 13px;">pushcrew.com</span><br><span style="margin-left: 13px;">Notification Message</span></div>
-							<div style="margin-top: -56px;margin-right: 56px;" class="col-xs-2"><img src="../images/cpa.png" style="width: 40px; float: right !important;border: 0;margin-right: -25px;"></div>
+							<div style="margin-right: 56px;" class="col-xs-2"><img src="../images/cpa.png" style="width: 40px; float: right !important;border: 0;margin-right: 16px;margin-top: -58px;"></div>
+                                <div style="border-left: 1px solid #ccc;height: 87px;width: 90px;padding: 0 !important; margin-left:245px;margin-top: -78px;" class="col-xs-2">
+                                    <div style="border-bottom:1px solid #ccc;text-align: center;height: 44px;line-height: 40px;width:83px;">Close</div>
+                                    <div style="text-align: center;height: 40px;line-height: 40px;">
+                                        <span>Settings</span>
+                                    </div>
+                                    
+                                </div>
 
 						</div>
 						

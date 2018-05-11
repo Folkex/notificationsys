@@ -11,12 +11,12 @@
 		>		
 		<ul class="m-menu__nav  m-menu__nav--dropdown-submenu-arrow ">
 			<li class="m-menu__item  m-menu__item--active" aria-haspopup="true" >
-				<button type="button" class="btn m-btn m-btn--gradient-from-brand m-btn--gradient-to-info" id="button_not">Send Push Notification</button>
+				<a href="send_notification_form.php" class="m-menu__link btn m-btn m-btn--gradient-from-primary m-btn--gradient-to-info "><span class="m-menu__link-title">  <span class="m-menu__link-wrap">      <span class="m-menu__link-text" style="color:white;">Send Push Notification</span><span class="m-menu__link-badge"></span>  </span></span></a>
 			</li>
 			<li class="m-menu__section">
                 <i class="m-menu__section-icon flaticon-more-v3"></i>
             </li>
-            <li class="m-menu__item  m-menu__item--submenu" aria-haspopup="true"  m-menu-submenu-toggle="hover"><a href="#" class="m-menu__link m-menu__toggle"><i class="m-menu__link-icon fa fa-th"></i><span class="m-menu__link-text">Summary</span></a><div class="m-menu__submenu "><span class="m-menu__arrow"></span>
+            <li class="m-menu__item  m-menu__item--submenu" aria-haspopup="true"  m-menu-submenu-toggle="hover"><a href="summary_form.php" class="m-menu__link m-menu__toggle"><i class="m-menu__link-icon fa fa-th"></i><span class="m-menu__link-text">Summary</span></a><div class="m-menu__submenu "><span class="m-menu__arrow"></span>
            </li>
            <li class="m-menu__item  m-menu__item--submenu" aria-haspopup="true"  m-menu-submenu-toggle="hover"><a href="#" class="m-menu__link m-menu__toggle"><i class="m-menu__link-icon fa fa-pie-chart"></i><span class="m-menu__link-text">Reports</span></a><div class="m-menu__submenu "><span class="m-menu__arrow"></span>
            </li>
