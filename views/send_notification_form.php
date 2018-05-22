@@ -1,5 +1,7 @@
 <?php
-include ('header.php');?>		
+include ('header.php');?>	
+
+
 <!-- begin::Body -->
 <div class="m-grid__item m-grid__item--fluid m-grid m-grid--ver-desktop m-grid--desktop m-body">		
 <?php include('leftmenu.php'); ?>
@@ -34,33 +36,25 @@ include ('header.php');?>
 							</div>			
 							</div>
 							</div>
-							<div class="m-portlet__body box" >
-		<!--begin::Content-->
-		<div class="tab-content">
-			<div class="tab-pane active" id="m_widget5_tab1_content" aria-expanded="true">
-				<!--begin::m-widget5-->
-				<div class="m-widget5">
-					<div class="m-widget5__item">
-						<div class="m-widget5__pic"> 
-							<img class="m-widget7__img img1" src="../images/cpa.png" alt="" style="">  
-						</div>
-						<div class="m-widget5__content">
-							<span class="m-widget5__title">
-								Notification Title
-							</span><br>
-							<span class="m-widget5__title">
-								Notification Message
-							</span><br>
-							<span class="m-widget5__title">
-								Nouralhouda@gmail.com
-							</span>
-						</div>
-					</div>
-					
-				</div>
-				<!--end::m-widget5-->
-			</div>
-			</div>
+							<div class="m-portlet__body " >
+		<div class="chrome-windows-div1">
+                    <div class="col-xs-3">
+                        <img src="../images/cpa.png" class="chrome-windows-image" width="80">
+                      
+                        <div class="col-xs-9 chrome-windows-text-div">
+                            <p style="" class="chrome-windows-p1">
+                            <span class="chrome-windows-sp1">test 3</span>
+                            </p>
+                            <p class="chrome-windows-p2">
+                                <span class="chrome-windows-sp2">this is a test only</span>
+                            </p>
+                            <p class="chrome-windows-p3">
+                                <span class="chrome-windows-sp3">ibra-ak95.pushcrew.com</span>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+		
 		</div>
 		<!--end::Content-->
 	</div>
@@ -85,32 +79,31 @@ include ('header.php');?>
 							</div>			
 							</div>
 							</div>
-							<div class="m-portlet__body body2" style=" ">
-		<!--begin::Content-->
-		<div class="tab-content">
-			<div class="tab-pane active" id="m_widget5_tab1_content" aria-expanded="true">
-				<!--begin::m-widget5-->
-				<div class="m-widget5">
-					<span class="m-widget5__title">
-								Notification Title
-							</span><br><br>
-							<span class="m-widget5__title span2" style="" >
-								Notification Message
-							</span>
-					<div class="m-widget5__item">
-						<div class="m-widget5__pic"> 
-							<img class="m-widget7__img img2" src="../images/cpa.png" alt="" style="">  
-						</div>
-						<span class="m-widget5__title">
-								Nouralhouda@gmail.com
-							</span>
-					</div>
-						
-					
-				</div>
-				<!--end::m-widget5-->
-			</div>
-			</div>
+							<div class="m-portlet__body " style=" ">
+                                <div class="firefox-windows-div1">
+                    <div class="firefox-windows-div2">
+                        <div style="color: #2c2c2c;">
+                            <strong>test 3</strong>
+                        </div>
+                    </div>
+                    <div class="firefox-windows-div3">
+                        <div class="firefox-windows-div4">
+                            <img src="../images/cpa.png" style="display: block;" width="80" height="80">
+                        </div>
+                        <div class="firefox-windows-div5">
+                            <div class="firefox-windows-div6">This is a test only</div>
+                            <div>
+                                <div class="firefox-windows-div7">
+                                    via ibra-ak95.pushcrew.com
+                                </div>
+                                <div class="firefox-windows-div8">
+                                    <i class="fa fa-cog"></i>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+		
 		</div>
 		<!--end::Content-->
 	</div>
@@ -136,40 +129,43 @@ include ('header.php');?>
 							</div>			
 							</div>
 							</div>
-							<div class="m-portlet__body body3" >
+							<div class="m-portlet__body " >
 		<!--begin::Content-->
-		<div class="tab-content">
-			<div class="tab-pane active" id="m_widget5_tab1_content" aria-expanded="true">
-				<!--begin::m-widget5-->
-				<div class="m-widget5">
-					<div class="m-widget5__item">
-						<div class="m-widget5__pic"> 
-							<img class="m-widget7__img" src="../images/cpa.png" alt="" style="width: 62px; float: left;margin-top: 9px; margin-left: -15px;">  
-						</div>
-						<div class="m-widget5__content">
-							<span class="m-widget5__title">
-								Notification Title
-							</span><br>
-							<span class="m-widget5__title">
-								Notification Message
-							</span>
-						</div>
-					</div>
-					
-				</div>
-				<!--end::m-widget5-->
-			</div>
-			</div>
+		<div class="chrome-android-div1">
+                    <div class="chrome-android-div2">
+                        <div class="col-xs-2">
+                            <img src="../images/cpa.png" class="chrome-android-img">
+                        </div>
+                        <div class="col-xs-10">
+                            <p class="chrome-android-p1">
+                                <span class="chrome-android-sp1">Test 3</span>
+                            </p>
+                            <p class="chrome-android-p2">
+                                <span class="chrome-android-sp2">This is a test only</span>
+                            </p>
+                        </div>
+                    </div>
+                </div>
 		</div>
 		<!--end::Content-->
 	</div>
 					</div>	
 						<div class="form-group m-form__group row">
 						<div class="col-lg-6">
-						<label>Image</label><div class="col-md-10"><div class="notification-min-height col-xs-3 p0"><img class="width-80 pull-left" src="../images/cpa.png" width="80"><div class="change-logo-text width-80 text-center cursor-pointer "><form enctype="multipart/form-data"><input accept="image/*" class="change-image-file cursor-pointer 
-            			" type="file"></form></div></div>
+						<label>Image</label>
+                            <div class="col-md-10">
+                            <div class="col-xs-3 p0">
+                                <img class="pull-left" src="../images/cpa.png" width="80">
+                                <div class="change-logo-text">
+                                    <span>
+                                        Change
+                                        <i class="fa fa-refresh fa-spin fa-fw none"></i>
+                                    </span>
+                                    <form enctype="multipart/form-data">
+                                        <input accept="image/*" class="browse-image" type="file"></form></div></div>
             			<div></div><br><br><br>
-            			<p class="mb0"><span class="text-grey-color pt5 font-11 image-info-align block">Recommended Size: 192 X 192</span></p><p class="text-danger mt100 pos--absolute hide "></p></div>
+            			<p class="mb0">
+                            <span>Recommended Size: 192 X 192</span></p></div>
 						</div>
 						<div class="col-lg-6">
 							<div class="m-portlet__head">
@@ -184,13 +180,18 @@ include ('header.php');?>
 							</div>			
 							</div>
 							</div><br>
-							<div class="m-portlet__body" style="background: #F0F0F0;border-radius: 5px;border: 1px solid #ccc; min-height: 89px;width: 362px !important;">
-							<div style="margin-top: 10px !important;padding: 10px !important;" class="col-xs-2"><img src="../images/chrome.png" style="width: 40px; float: left !important;border: 0;margin-left: -25px;"></div>
-							<div style="margin-top: -15px;margin-right: 60px;" class="col-xs-2"><span style="margin-left: 13px;">Notification Title</span><br> <span style="margin-left: 13px;">pushcrew.com</span><br><span style="margin-left: 13px;">Notification Message</span></div>
-							<div style="margin-right: 56px;" class="col-xs-2"><img src="../images/cpa.png" style="width: 40px; float: right !important;border: 0;margin-right: 16px;margin-top: -58px;"></div>
-                                <div style="border-left: 1px solid #ccc;height: 87px;width: 90px;padding: 0 !important; margin-left:245px;margin-top: -78px;" class="col-xs-2">
-                                    <div style="border-bottom:1px solid #ccc;text-align: center;height: 44px;line-height: 40px;width:83px;">Close</div>
-                                    <div style="text-align: center;height: 40px;line-height: 40px;">
+							<div class="m-portlet__body mac-body" >
+							<div class="col-xs-2 send-mac-chrome">
+                                <img src="../images/chrome.png" class="send-mac-chrome-img1"></div>
+							<div class="col-xs-2 send-mac-chrome-div1">
+                                <span class="chrome-mac-sp1">Notification Title</span><br> 
+                                <span class="chrome-mac-sp1">pushcrew.com</span><br>
+                                <span class="chrome-mac-sp1">Notification Message</span></div>
+							<div class="col-xs-2 send-chrome-mac-div2">
+                                <img src="../images/cpa.png" class="send-chrome-mac-img2"></div>
+                                <div class="col-xs-2 send-chrome-mac-div3">
+                                    <div class="send-chrome-mac-div4" >Close</div>
+                                    <div class="send-chrome-mac-div5" >
                                         <span>Settings</span>
                                     </div>
                                     
@@ -204,12 +205,9 @@ include ('header.php');?>
 					<div class="form-group m-form__group row">
 						<div class="col-lg-6">
 							<div>
-								<label class="m-checkbox">
-											<input type="checkbox">Show Big Image in Notification
-											<span></span>
-											</label><br>
+								<input type="checkbox" id="show_big_img" /> Show Big Image in Notification<br>
 											<span>Big size images are only supported on Chrome (56+) browser</span>
-											<div style="display: none; ">
+											<div style="display: none;" id="upload_image">
 												<button type="button" class="btn btn-primary">Upload</button><br>
 												<span>Recommended Size: 600 X 400</span>
 											</div>
@@ -219,21 +217,18 @@ include ('header.php');?>
 					<div class="form-group m-form__group row">
 						<div class="col-lg-6">
 							<div>
-								<label class="m-checkbox">
-											<input type="checkbox">Enable Button(s) on Chrome Notification
-											<span></span>
-											</label><br>
+								<input type="checkbox" id="show_btns" /> Enable Button(s) on Chrome Notification<br>
 											<span>Call to action buttons are only supported on Chrome browser</span><br><br>
-											<div style="visibility: ;">
-												<button type="button" class="btn btn-secondary">One button</button>  <button type="button" class="btn btn-primary">two buttons</button><br>
+											<div style="display:none;" id="btns">
+												<button type="button" class="btn btn-secondary" id="one_btn">One button</button>  <button type="button" class="btn btn-primary" id="two_btns">two buttons</button><br>
 											</div><br>
-											<div class="container" style="display: none;">
+											<div class="container" style="display: none;" id="one_btn_form">
 												<label>Button text</label>
 												<input class="form-control m-input m-input--solid" id="exampleTextarea" rows="2" placeholder="36 characters max" type="text"><br>
 												<label>Landing Page URL</label>
 												<input class="form-control m-input m-input--solid" id="exampleTextarea" placeholder="Enter URL with http:// or https://"  type="text">
 											</div><br>
-												<div class="container" style="display: none;">
+												<div class="container" style="display: none;" id="two_btns_forms">
 												<label>Button text</label>
 												<input class="form-control m-input m-input--solid" id="exampleTextarea" rows="2" placeholder="36 characters max" type="text"><br>
 												<label>Landing Page URL</label>
@@ -261,7 +256,7 @@ include ('header.php');?>
 						<div class="form-group m-form__group row" >
 							
 						<div class="inline-block col-lg-3"><label class="font-weight-400" for="days">Days</label>
-							<select class="form-control m-input" id="exampleSelect1" style="width: 47px;" >
+							<select class="form-control m-input" id="exampleSelect1" style="width: 70px;" >
 							<option>1</option>
 							<option>2</option>
 							<option>3</option>
@@ -272,7 +267,7 @@ include ('header.php');?>
 					
 					
 						<div class="inline-block inline-block col-lg-3"><label class="font-weight-400" for="days">Hours</label>
-							<select class="form-control m-input" id="exampleSelect1" style="width: 47px;" >
+							<select class="form-control m-input" id="exampleSelect1" style="width: 70px;" >
 							<option>1</option>
 							<option>2</option>
 							<option>3</option>
@@ -281,7 +276,7 @@ include ('header.php');?>
 						</select>
 						</div>
 						<div class="inline-block inline-block col-lg-3"><label class="font-weight-400" for="days">Minutes</label>
-							<select class="form-control m-input" id="exampleSelect1" style="width: 47px;" >
+							<select class="form-control m-input" id="exampleSelect1" style="width: 70px;" >
 							<option>1</option>
 							<option>2</option>
 							<option>3</option>
@@ -297,7 +292,7 @@ include ('header.php');?>
 						<div class="col-lg-6">
 							<div>
 								<label class="m-checkbox">
-											<input type="checkbox">Schedule Notification(Current time is 08-05-2018 15:10:59 GMT+03:00 Asia/Beirut)
+											<input type="checkbox">Schedule Notification(Current time is <span id="time"></span>GMT+03:00 Asia/Beirut)
 											<span></span>
 											</label><br>
 											
@@ -319,7 +314,7 @@ include ('header.php');?>
 					
 					
 						<div class="inline-block inline-block col-lg-3"><label class="font-weight-400" for="days">Hours</label>
-							<select class="form-control m-input" id="exampleSelect1" style="width: 47px;" >
+							<select class="form-control m-input" id="exampleSelect1" style="width: 70px;" >
 							<option>1</option>
 							<option>2</option>
 							<option>3</option>
@@ -328,7 +323,7 @@ include ('header.php');?>
 						</select>
 						</div>
 						<div class="inline-block inline-block col-lg-3"><label class="font-weight-400" for="days">Minutes</label>
-							<select class="form-control m-input" id="exampleSelect1" style="width: 47px;" >
+							<select class="form-control m-input" id="exampleSelect1" style="width: 70px;" >
 							<option>1</option>
 							<option>2</option>
 							<option>3</option>
@@ -360,3 +355,42 @@ include ('header.php');?>
 </div>
 </div>
 <?php include('footer.php'); ?>
+<script>
+    $(function () {
+        $("#show_big_img").click(function () {
+            if ($(this).is(":checked")) {
+                $("#upload_image").show();
+               
+            } else {
+                $("#upload_image").hide();
+                
+            }
+        });
+    });
+     $(function () {
+        $("#show_btns").click(function () {
+            if ($(this).is(":checked")) {
+                $("#btns").show();
+               
+            } else {
+                $("#btns").hide();
+                
+            }
+        });
+    });
+    $(function(){
+       $("#one_btn").click(function(){
+          $("#one_btn_form").show();
+           $("#two_btns_forms").hide();
+       });
+         $("#two_btns").click(function(){
+          $("#two_btns_forms").show();
+             $("#one_btn_form").show();
+       });
+    });
+    
+    
+  
+</script>
+
+

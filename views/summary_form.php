@@ -52,7 +52,9 @@ include ('header.php');?>
         </div>
     
     </div><br>
-    <div class="total-subs">
+    <div class="row">
+        <div class="col-lg-6">
+            <div class="total-subs">
         <div class="row-subs">
             <div class="col-sm-12 row-subs1">
                 <h5 class="h5-subs"> Browser Distribution</h5>
@@ -88,12 +90,134 @@ include ('header.php');?>
             </div>
         </div>
     </div>
-    <div class="col-md-6 col-sm-12 col-xs-12" style="margin-top: -377px !important;padding-right: 0 !important; margin-left:611px;">
-        <div style="margin-right: -10px;margin-left: -10px;">
-            <div style="margin-bottom: 10px !important;" class="col-sm-12">
-                <h5 style="font-size: 14px;font-weight: 700;margin-top: 10px;margin-bottom10px;font-family: inherit;line-height:1.1;color: inherit"> Platform Distribution</h5>
-            </div>
         </div>
+        <div class="col-lg-6">  
+                <h5 class="h5-piechart"> Platform Distribution</h5>
+            <div class="col-sm-8 chart-precedence">
+                <div class="bg-color-white">
+                    <div class="recharts-responsive-container" >
+                        <div class="recharts-wrapper">
+                            <svg  width="368" height="300" viewBox="0 0 368 300" version="1.1">
+                            <g>
+                                <g>
+                                    <g>
+                                        <path fill="#0199CC" stroke="#fff" class="recharts-sector" d="M 284,150.00000000000003A 100,100,0,1,1,283.99999998476915,149.99825467074814L 218.9999999946692,149.99938913476186A 35,35,0,1,0,219,150 Z">
+                                        </path>
+                                    </g>
+                                </g>
+                                <g >
+                                    <g>
+                                        <text dominant-baseline="central" fill="white" font-size="15px" text-anchor="end" x="137.3" y="150">100.0%</text>
+                                    </g>
+                                </g>
+                            </g>
+                            </svg>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-4 chart-platform-legend">
+                <div class="chart-legend-position">
+                    <div class="chart-div1" >
+                        <span class="chart-div2">Desktop (2)</span>
+                    </div>
+                    <div class="chart-div3">
+                        <span class="chart-div4" >Mobile (0)</span>
+                    </div>
+                </div>
+            </div>
+   </div>
+    </div><br>
+    <div class="row">
+         <div class="m-portlet2">
+			<div class="head2">
+				<div class="m-portlet__head-caption">
+					<div class="m-portlet__head-title" style="margin-top: 17px;">
+						<span class="m-portlet__head-text">
+                        <div class="col-lg-6">
+                            <h3>Last Notification Overview</h3>
+                            <span>May 2nd 2018, 10:56 <font color="#2196f3 " >(GMT+03:00 Asia/Beirut)</font></span><br>
+                            <div class="m-portlet__body box" style="margin-left: 28px;width: 334px;" >
+		                      <!--begin::Content-->
+                            <div class="tab-content">
+                            <div class="tab-pane active" id="m_widget5_tab1_content" aria-expanded="true">
+                                <!--begin::m-widget5-->
+                                <div class="m-widget5">
+                                    <div class="m-widget5__item">
+                                        <div class="m-widget5__pic"> 
+                                            <img class="m-widget7__img img1" src="../images/cpa.png" alt="" style="">  
+                                        </div>
+                                        <div class="m-widget5__content">
+                                            <span class="m-widget5__title">
+                                                Notification Title
+                                            </span><br>
+                                            <span class="m-widget5__title">
+                                                Notification Message
+                                            </span><br>
+                                            <span class="m-widget5__title">
+                                                Nouralhouda@gmail.com
+                                            </span>
+                                        </div>
+                                    </div>
+
+                                </div>
+                                <!--end::m-widget5-->
+                            </div>
+                            </div>
+                        </div>
+                        </div>
+						</span>      
+					</div>
+				</div>
+			</div>
+		</div>
+        <div class="col-xs-12 col-md-7 noti-div" >
+            <table class="table">
+                <tbody>
+                    <tr class="noti-tr">
+                        <td>Delivered</td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td><span class="noti-tr-del">1</span></td>
+
+                    </tr>
+                       <tr class="noti-tr">
+                        <td> 1 Clicks on Main Notification</td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td><span class="noti-tr-clicks">1</span></td>
+
+                    </tr>
+                    <tr class="noti-tr">
+                        <td> 100% Click Rate (Clicks/Delivered)</td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td><span class="noti-tr-rate">100%</span></td>
+
+                    </tr>
+                    <tr style="">
+                        <td>Offer Page URL</td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td><a class="noti-link">http://ibra-ak95.com/latestpost-view.php</a></td>
+
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        
     </div>
 </div>
 </div>
