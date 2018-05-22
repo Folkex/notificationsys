@@ -211,8 +211,7 @@ include ('header.php');?>
                         <td></td>
                         <td></td>
                         <td></td>
-                        <td><a class="noti-link">http://ibra-ak95.com/latestpost-view.php</a></td>
-
+                        <td><a class="noti-link" href="http://ibra-ak95.com/latestpost-view.php">&nbsp;http://ibra-ak95.com/latestpost-view.php</a></td>
                     </tr>
                 </tbody>
             </table>

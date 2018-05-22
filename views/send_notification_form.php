@@ -292,7 +292,7 @@ include ('header.php');?>
 						<div class="col-lg-6">
 							<div>
 								<label class="m-checkbox">
-											<input type="checkbox">Schedule Notification(Current time is <span id="time"></span>GMT+03:00 Asia/Beirut)
+											<input type="checkbox">Schedule Notification(Current time is <div id="time"></div>GMT+03:00 Asia/Beirut)
 											<span></span>
 											</label><br>
 											
@@ -391,6 +391,10 @@ include ('header.php');?>
     
     
   
+</script>
+<script>
+var d = new Date();
+document.getElementById("time").innerHTML =d.toUTCString().substr(0,26);;
 </script>
 
 
